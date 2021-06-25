@@ -1,10 +1,73 @@
-@import 'vars';
 @import 'reset';
+@import 'vars';
 @import 'fonts';
 @import 'global';
 
 
+.header{
+
+   &__wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 0;
+   }
+}
+
+.menu{
+   margin: 0 15px;
+   text-transform: uppercase;
+   @extend %roboto-regular;
+
+   &__list{
+      display: flex;
+   }
+
+   &__item + .menu__item{
+      margin-left: 35px;
+   }
+
+   &__link{
+      transition: .3s;
+      color: $title;
+      border-bottom: 1px solid transparent;
+
+      &:hover{
+         @extend %link-hover;
+      }
+      
+      &--active{
+         color: $accent;
+         border-bottom: 1px solid $accent;
+         @extend %roboto-bold;
+      }
+   }
+}
+
+.user-nav{
+   display: flex;
+   margin-right: 15px;
+
+   &__item + .user-nav__item{
+      margin-left: 20px;
+      position: relative;
+   }
+
+   &__number{
+      position: absolute;
+      top: -10px;
+      right: -15px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $accent;
+      color: #fff;
+      font-size: 12px;
+      @extend %quicksand-medium;
+      line-height: 20px;
+      text-align: center;
+   }
+}
 
 
-
-@import 'meida';
+@import 'media';
