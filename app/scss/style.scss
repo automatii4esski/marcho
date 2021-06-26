@@ -1,10 +1,180 @@
-@import 'vars';
 @import 'reset';
+@import 'vars';
 @import 'fonts';
 @import 'global';
 
 
+.header{
+
+   &__wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 40px 0;
+   }
+}
+
+.menu{
+   margin: 0 15px;
+   text-transform: uppercase;
+   @extend %roboto-regular;
+
+   &__list{
+      display: flex;
+   }
+
+   &__item + .menu__item{
+      margin-left: 35px;
+   }
+
+   &__link{
+      transition: .3s;
+      color: $title;
+      border-bottom: 1px solid transparent;
+
+      &:hover{
+         @extend %link-hover;
+      }
+      
+      &--active{
+         color: $accent;
+         border-bottom: 1px solid $accent;
+         @extend %roboto-bold;
+      }
+   }
+}
+
+.user-nav{
+   display: flex;
+   margin-right: 15px;
+
+   &__item + .user-nav__item{
+      margin-left: 20px;
+      position: relative;
+   }
+
+   &__number{
+      position: absolute;
+      top: -10px;
+      right: -15px;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: $accent;
+      color: #fff;
+      font-size: 12px;
+      @extend %quicksand-medium;
+      line-height: 20px;
+      text-align: center;
+   }
+}
+
+.footer{
+   background: $bg-semi;
+}
+
+.footer-top{
+   padding-top: 60px;
+   padding-bottom: 30px;
+   display: flex;
+   justify-content: space-between;
+   border-bottom: 1px solid #ececec;
+
+   &__column-contact{
+      flex: 0 1 250px;
+   }
+
+   &__column-nav{
+      flex: 0 1 170px;
+      margin-left: 20px;
+   }
+
+   &__column-sub{
+      flex: 0 4 470px;
+      margin-left: 20px;
+   }
+
+   &__logo{
+      margin-bottom: 28px;
+   }
+
+   &__title{
+      margin-bottom: 40px;
+      font-size: 22px;
+      line-height: 36px;
+      @extend %roboto-regular;
+      color: $title;
+      line-height: normal;
+   }
+
+   &__address{
+      font-style: normal;
+   }
+
+   &__item + .footer-top__item{
+      margin-top: 12px;
+   }
+
+   &__contact-list{
+      margin-bottom: 25px;
+   }
+
+   &__socials-link{
+      fill: $text;
+      transition: .3s;
+
+      &:hover{
+         fill: $accent;
+      }
+
+      & + .footer-top__socials-link{
+         margin-left: 12px;
+      }
+   }
+
+   &__text{
+      margin-bottom: 25px;
+   }
+
+   &__form{
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__search{
+      flex: 1 1 auto;
+      border: none;
+      background: #fff;
+      padding: 11px;
+      box-shadow: 0px 7px 20px 0px rgba(192, 192, 192, 0.3);
+   }
+
+   &__submit{
+      border: none;
+      margin-left: 10px;
+      cursor: pointer;
+   }
+}
+
+.footer-bot{
+   display: flex;
+   justify-content: space-between;
+   padding: 17px 0;
+   font-size: 12px;
+
+   &__copy{
+      margin-right: 20px;
+   }
+
+   &__accept{
+      display: flex;
+      align-items: center;
+   }
+
+   &__accept-img{
+      margin-left: 12px;
+   }
+}
 
 
-
-@import 'meida';
+@import 'media';

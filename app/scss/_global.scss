@@ -1,0 +1,38 @@
+html,
+body{
+   height: 100%;
+}
+
+body{
+   @extend %quicksand-medium;
+   font-size: 16px;
+   line-height: 26px;  
+   color: $text;
+   display: flex;
+   flex-direction: column;
+}
+
+.main{
+   flex: 1 1 auto;
+}
+
+.btn-solid{
+   background: $accent;
+   color: #fff;
+   text-transform: uppercase;
+   @extend %roboto-regular;
+   padding: 11px 15px;
+   transition: .3s;
+   box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
+
+   &:hover{
+      background: #ff8091;
+   }
+   
+}
+
+.container{
+   max-width: 1200px;
+   margin: 0 auto;
+   padding: 0 15px;
+}
