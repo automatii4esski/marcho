@@ -16,19 +16,26 @@ body{
    flex: 1 1 auto;
 }
 
+.title{
+   @extend %roboto-bold;
+   font-size: 48px;
+   line-height: normal;
+   text-transform: uppercase;
+   color: $title;
+}
+
 .btn-solid{
    background: $accent;
    color: #fff;
    text-transform: uppercase;
    @extend %roboto-regular;
-   padding: 11px 15px;
+   padding: 7px 25px;
    transition: .3s;
    box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3);
 
    &:hover{
       background: #ff8091;
    }
-   
 }
 
 .container{

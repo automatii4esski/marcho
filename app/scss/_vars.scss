@@ -39,3 +39,17 @@ $bg-semi: #f6f6f6;
    color: $accent;
    border-bottom: 1px solid $accent;
 }
+
+%title-center{
+   // @extend %title-center;
+   text-align: center;
+   margin-bottom: 15px;
+}
+
+%subtitle-center{
+   // @extend %subtitle-center;
+   text-align: center;
+   margin: 0 auto;
+   margin-bottom: 40px;
+   max-width: 530px;
+}
