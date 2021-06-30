@@ -53,3 +53,11 @@ $bg-semi: #f6f6f6;
    margin-bottom: 40px;
    max-width: 530px;
 }
+
+@function max($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+
+@function min($numbers...) {
+  @return m#{i}n(#{$numbers});
+}

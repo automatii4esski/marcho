@@ -1,6 +1,6 @@
 @import 'reset';
-@import 'libs';
 @import 'vars';
+@import 'libs';
 @import 'fonts';
 @import 'global';
 
@@ -360,6 +360,83 @@
          max-width: 54%;
          padding-top: 15px;
       }
+   }
+}
+
+
+
+
+// TREND-FASHION
+
+.trend-fashion{
+   background: url('../images/content/trend-fashion/bg.svg') center/cover no-repeat, $bg-semi;
+   padding: 110px 0;
+
+   &__wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__img-link{
+      flex: 0 1 535px;
+      margin-right: 55px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: relative;
+
+      &::before{
+         content:"";
+         position: absolute;
+         background: url('../images/content/trend-fashion/video-triangle.png') no-repeat;
+         width: 20px;
+         height: 20px;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         z-index: 2;
+      }
+
+      &::after{
+         content:"";
+         position: absolute;
+         z-index: 1;
+         width: 85px;
+         height: 85px;
+         border-radius: 50%;
+         background: $accent;
+         top: 50%;
+         left: 50%;
+         transform: translate(-50%, -50%);
+         box-shadow: 0px 0px 0px 0px rgba($accent, 0.6),
+                     0px 0px 0px 0px rgba($accent, 0.4);
+         transition: .3s;
+      }
+
+      &:hover::after{
+         box-shadow: 0px 0px 0px 10px rgba($accent, 0.6),
+                     0px 0px 0px 20px rgba($accent, 0.4);
+      }
+   }
+   
+   &__text{
+      flex: 0 1 570px;
+   }
+
+   &__suptitle{
+      font-size: 22px;
+      text-transform: uppercase;
+      color: $accent;
+      margin-bottom: 15px;
+   }
+   
+   &__title{
+      margin-bottom: 30px;
+   }
+
+   &__desc{
+      margin-bottom: 50px;
    }
 }
 
