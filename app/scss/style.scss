@@ -443,6 +443,146 @@
 
 
 
+// PRODUCTS
+
+.products{
+   padding: 110px 0;
+   
+   &__title{
+      @extend %title-center;
+   }
+
+   &__subtitle{
+      @extend %subtitle-center;
+   }
+
+   &__inner{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 45px 30px;
+      margin-bottom: 55px;
+   }
+
+   &__link-wrapper{
+      display: flex;
+      justify-content: center;
+   }
+
+   &__link{
+
+   }
+}
+
+.product-item{
+   max-width: 370px;
+
+   &--sale{
+
+      .product-item__box::before{
+         content: "sale";
+         position: absolute;
+         background: $accent;
+         top: 20px;
+         left: 20px;
+         color: #fff;
+         text-transform: uppercase;
+         @extend %roboto-regular;
+         padding: 5px 9px;
+         transition: .3s;
+         box-shadow: 0px 7px 20px 0px rgba(255, 17, 48, 0.3); 
+      }
+   }
+
+   &__box{
+      position: relative;
+      margin-bottom: 20px;
+      height: 370px;
+
+      &:hover{
+
+         .product-item__link-wrapper{
+            opacity: 1;
+            transform: translate(-50%, 0px);
+         }
+      }
+   }
+
+   &__img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+   }
+
+   &__link-wrapper{
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 8px 0;
+      border-radius: 22px;
+      bottom: 50px;
+      left: 50%;
+      box-shadow: 0px 5px 30px 0px rgba(152, 152, 152, 0.2);
+      transform: translate(-50%, 20px);
+      background: #fff;
+      opacity: 0;
+      transition: .3s;
+   }
+
+   &__link{
+      padding: 3px 20px;
+      line-height: normal;
+
+      & + .product-item__link{
+         border-left: 1px solid #ececec;
+      }
+
+      path{
+         transition: .3s;
+      }
+
+      &:hover path {
+         fill: $accent;
+      }
+   }
+
+   &__info{
+      text-align: center;
+      @extend %roboto-regular;
+      color: $title;
+   }
+
+   &__rate{   
+      margin: 0 auto;
+      margin-bottom: 10px;
+   }
+
+   &__title{
+      font-size: 22px;
+      margin-bottom: 10px;
+      @extend %roboto-regular;
+   }
+
+   &__price{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+   }
+
+   &__new-price{
+      @extend %roboto-bold;
+   }
+
+   &__old-price{
+      margin-left: 10px;
+      text-decoration: line-through;
+      color: $text;
+   }
+}
+
+
+
+
 //FOOTER
 
 .footer{
