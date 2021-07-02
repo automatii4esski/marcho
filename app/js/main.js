@@ -5,7 +5,7 @@ $(function () {
       dots: true,
       arrows: false,
       autoplay: true,
-      autoplayspeed: 3500,
+      autoplayspeed: 2500,
    });
 
    $(".product-item__rate").rateYo({
