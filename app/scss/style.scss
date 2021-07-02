@@ -895,7 +895,7 @@
    }
 
    &__label.account__label-checkbox{
-      margin: 50px 0 10px;
+      margin-bottom: 10px;
       display: inline-flex;
       align-items: center;
    }
@@ -921,6 +921,47 @@
 
    &__forgot-link{
       color: $accent;
+   }
+
+   &__register-text{
+      margin-bottom: 30px;
+   }
+}
+
+
+
+
+// PAGE-404
+
+.page-404{
+   padding: 110px 0;
+
+   &__inner{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__text{
+      max-width: 530px;
+      width: 100%;
+      margin-right: 35px;
+   }
+
+   &__img-wrapper{
+      flex: 0 2 auto;
+   }
+
+   &__title{
+      @extend %roboto-bold;
+      font-size: 48px;
+      margin-bottom: 30px;
+      color: #28384f;
+      line-height: 1;
+   }
+
+   &__desc{
+      margin-bottom: 45px;
    }
 }
 
