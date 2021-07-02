@@ -11,6 +11,7 @@
 
 .header{
    position: absolute;
+   background: #fff;
    z-index: 5;
    right: 0;
    left: 0;
@@ -87,7 +88,6 @@
 //TOP-SLIDER
 
 .top-slider{
-   padding-top: 110px;
 
    &__item{
       position: relative;
@@ -787,6 +787,64 @@
          &::after{
             opacity: 1;
          }
+      }
+   }
+}
+
+
+
+
+// BREADCRUMBS
+
+.breadcrumbs-container{
+   max-width: 1700px;
+   padding: 0 15px;
+   margin: 0 auto;
+}
+
+.breadcrumbs{
+   
+   &__inner{
+      background: url('../images/breadcrumbs-bg.jpg') center top/cover no-repeat;
+      padding: 120px 0;
+   }
+
+   &__title{
+      @extend %roboto-regular;
+      margin-bottom: 25px;
+      text-align: center;
+   }
+
+   &__list{
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      max-width: 530px;
+      margin: 0 auto;
+      column-gap: 10px;
+   }
+
+   &__list-item{
+      position: relative;
+      padding-left: 25px;
+
+      &::before{
+         content: "";
+         position: absolute;
+         left: 0;
+         top: 50%;
+         transform: translateY(-50%);
+         width: 17px;
+         height: 17px;
+         background: url('../images/icons/home.svg') no-repeat;
+      }
+
+      & + &::before{
+         background: url('../images/icons/double-arrow-right.svg') center center no-repeat;
+      }
+
+      &:last-child{
+         color: $accent;
       }
    }
 }
