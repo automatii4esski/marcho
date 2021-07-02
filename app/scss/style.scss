@@ -852,6 +852,81 @@
 
 
 
+// ACCOUNT
+
+.account{
+   padding: 110px 0;
+
+   &__form{
+      max-width: 570px;
+      margin: 0 auto;
+   }
+
+   &__nav{
+      display: flex;
+      justify-content: center;
+      margin-bottom: 45px;
+      @extend %roboto-regular;
+      column-gap: 50px;
+      text-transform: uppercase;
+   }
+
+   &__nav-item--active{
+      @extend %roboto-bold;
+      color: $accent;
+   }
+
+   &__input,
+   &__submit{
+      display: block;
+      padding: 15px;
+      border: none;
+      background: #f6f6f6;
+      width: 100%;
+   }
+
+   &__label-text{
+      margin-bottom: 5px;
+   }
+
+   &__label{
+      margin-bottom: 30px;
+      display: block;
+   }
+
+   &__label.account__label-checkbox{
+      margin: 50px 0 10px;
+      display: inline-flex;
+      align-items: center;
+   }
+
+   &__input.account__input-checkbox{
+      width: auto;
+      margin-right: 5px;
+   }
+
+   &__submit{
+      background: #292929;
+      text-transform: uppercase;
+      color: #fff;
+      @extend %roboto-regular;
+      margin-bottom: 10px;
+      transition: .3s;
+      cursor: pointer;
+
+      &:hover{
+         background: lighten(#292929, 15%);
+      }
+   }
+
+   &__forgot-link{
+      color: $accent;
+   }
+}
+
+
+
+
 //FOOTER
 
 .footer{
