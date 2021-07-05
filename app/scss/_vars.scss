@@ -40,6 +40,14 @@ $bg-semi: #f6f6f6;
    border-bottom: 1px solid $accent;
 }
 
+%input-hide{
+   // @extend %input-hide;
+   width: 1px;
+   height: 1px;
+   position: absolute;
+   clip: rect(0 0 0 0);
+}
+
 %title-center{
    // @extend %title-center;
    text-align: center;

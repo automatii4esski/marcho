@@ -1,5 +1,7 @@
 $(function () {
 
+   $('.shop-content__sort-position').styler();
+
    $('.top-slider').slick({
       fade: true,
       dots: true,
@@ -80,11 +82,35 @@ $(function () {
       };
    })(jQuery);
 
-   $(".timer__number-wrapper").aksCountDown({
+   $('.timer__number-wrapper').aksCountDown({
       endTime: $('.timer').attr('data-date'),
       onEnd: function () {
          $(this).html('<div class="timer-end">Finished Time</div>');
       }
    });
 
+   $('.filter-price__range').ionRangeSlider({
+      type: "double",
+      onChange: function (data) {
+         $('.filter-price__from').text(data.from);
+         $('.filter-price__to').text(data.to);
+      },
+      onStart: function (data) {
+         $('.filter-price__from').text(data.from);
+         $('.filter-price__to').text(data.to);
+      }
+   });
+
+   $('.shop-content__view-btn').on('click', function () {
+      $('.shop-content__view-btn').removeClass('shop-content__view-btn--active');
+      $(this).addClass('shop-content__view-btn--active')
+   });
+
+   $('.btn-grid').on('click', function () {
+      $('.shop-content__inner').removeClass('shop-content__inner--line');
+   });
+
+   $('.btn-line').on('click', function () {
+      $('.shop-content__inner').addClass('shop-content__inner--line');
+   });
 });
